@@ -5,6 +5,8 @@
  */
 
 const mysql = require('mysql');
+const scanStation = require('./utils/scan_station/scanStation');
+const scanNodes = require('./utils/scan_nodes/scanNodes');
 
 /* db init connetions pool */
 //increase connections
@@ -29,7 +31,8 @@ function scan(){
             // console.log(result[1].station_id);
 
             result.map((station) => {
-                console.log(station.station_id);
+                scanStation(station.station_id, pool);
+                scanNodes(station.station_id, pool);
             })
         }
     });
