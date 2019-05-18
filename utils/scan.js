@@ -22,7 +22,7 @@ function scan(){
         if(queryError){
             console.log(queryError);
         } else {
-            console.log(results);
+            console.log(result);
         }
     });
 }
