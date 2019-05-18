@@ -8,9 +8,9 @@ function scanStation(id, pool){
     pool.query(QUERY, (queryError, result, fields) => {
         if (queryError){
             console.log(queryError);
-        } else if (result){
-            const db_epoch_time = result[0].hoursSinceEpoch_of_db_insertion;
-            if(db_epoch_time){
+        } else {
+            if(result[0]){
+                const db_epoch_time = result[0].hoursSinceEpoch_of_db_insertion;
                 console.log(db_epoch_time);
             }
         }
