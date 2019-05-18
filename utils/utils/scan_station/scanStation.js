@@ -9,7 +9,7 @@ function scanStation(id, pool){
         if(queryError){
             console.log(queryError);
         } else {
-            console.log(result[0].hoursSinceEpoch);
+            console.log(result[0]);
         }
     });
 }
