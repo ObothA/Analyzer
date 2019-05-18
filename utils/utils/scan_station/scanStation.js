@@ -3,7 +3,15 @@
 
 
 function scanStation(id, pool){
-    console.log(`scanStation => ${id}`);
+    const QUERY = `select 'hoursSinceEpoch of db_insertion' from GeneralTable stationID=${id} ORDER BY id DESC limit 1`;
+
+    pool.query(QUERY, (queryError, result, fields) => {
+        if(queryError){
+            console.log(queryError);
+        } else {
+            console.log(result[0].hoursSinceEpoch);
+        }
+    });
 }
 
 module.exports = scanStation;
