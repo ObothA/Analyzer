@@ -23,6 +23,8 @@ function scan(){
             console.log(queryError);
         } else {
             console.log(result);
+            console.log();
+            console.log(result[1]);
         }
     });
 }
