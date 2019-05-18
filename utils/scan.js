@@ -16,7 +16,7 @@ const pool = mysql.createPool({
 
 
 function scan(){
-    const QUERY = `select station_id where station_id > 40`;
+    const QUERY = `select station_id where 'station_id' > 40`;
 
     pool.query(QUERY, (queryError, result, fields) => {
         if(queryError){
