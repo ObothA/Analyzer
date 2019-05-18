@@ -31,8 +31,10 @@ function scan(){
             // console.log(result[1].station_id);
 
             result.map((station) => {
-                scanStation(station.station_id, pool);
-                scanNodes(station.station_id, pool);
+                if(station){
+                    scanStation(station.station_id, pool);
+                    scanNodes(station.station_id, pool);
+                }
             })
         }
     });

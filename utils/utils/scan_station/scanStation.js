@@ -11,7 +11,7 @@ function scanStation(id, pool){
         } else {
             if(result[0]){
                 const db_epoch_time = result[0].hoursSinceEpoch_of_db_insertion;
-                console.log(db_epoch_time);
+                console.log(`${id} => ${db_epoch_time}`);
             }
         }
     });
