@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 /** purpose
  * to scan stations for on or off status
  */
@@ -22,9 +24,13 @@ function scan(){
         if(queryError){
             console.log(queryError);
         } else {
-            console.log(result);
-            console.log();
-            console.log(result[1].station_id);
+            // console.log(result);
+            // console.log();
+            // console.log(result[1].station_id);
+
+            result.map((station) => {
+                console.log(station.station_id);
+            })
         }
     });
 }

@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 /** 
  * Welcome to the analyzer 
  * intended to run every 2 hours
