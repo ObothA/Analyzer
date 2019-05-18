@@ -24,7 +24,7 @@ function scan(){
         } else {
             console.log(result);
             console.log();
-            console.log(result[1]);
+            console.log(result[1].station_id);
         }
     });
 }
